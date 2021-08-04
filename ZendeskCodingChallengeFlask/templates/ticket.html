@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/css/styles.css" /> -->
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Ticket View</title>
+  </head>
+  <body>
+    <div class="title">Single Ticket View</div>
+    <div class="view">
+      <div class="subject">
+        {%if feedback%}
+        <div class="feedback_subject">{{feedback[0]}}</div>
+        <div class="feedback_status">Status: {{feedback[4]}}</div>
+        {%endif%}
+      </div>
+
+      <div class="headline">
+        {%if feedback%}
+        <div class="feedback_status">Requester ID: {{feedback[2]}}</div>
+        <div class="feedback_status">Date: {{feedback[3]}}</div>
+        {%endif%}
+      </div>
+      <div class="message">
+        {%if feedback%}
+        <div class="feedback_message">{{feedback[1]}}</div>
+        {%endif%}
+      </div>
+      <!-- <div class="view_tickets_btn">Back to tickets</div> -->
+      <form action="nav_back" method="post" class="view_tickets_btn">
+        <input type="submit" value="Back to tickets" />
+      </form>
+      <div class="error_body"></div>
+      <!-- <a href="index.tpl" class="view_tickets_btn">Back to tickets</a> -->
+    </div>
+  </body>
+</html>

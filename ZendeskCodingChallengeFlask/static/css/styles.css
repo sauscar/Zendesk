@@ -1,0 +1,241 @@
+* {
+  font-family: "Arial";
+  background-color: rgb(255, 255, 255);
+}
+.title {
+  font-size: 36px;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  display: flex;
+  margin: 25px;
+  padding-left: 45px;
+}
+.logo {
+  width: 600px;
+  height: 300px;
+}
+.logo img {
+  width: 100px;
+  height: 50px;
+}
+.caption {
+  font-size: 18px;
+  padding-left: 70px;
+  margin-bottom: 25px;
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  display: flex;
+}
+.main_listview {
+  align-items: center;
+  justify-content: center;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+.listview {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  margin: 0 auto;
+}
+.view_tickets_btn {
+  width: 200px;
+  height: 50px;
+  margin: 25px;
+  background-color: #17494d;
+  /* border: none; */
+  border-radius: 30px;
+  border: black;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-decoration: none;
+}
+.view_tickets_btn:hover {
+  cursor: pointer;
+  background-color: #0d9e5a;
+  transition: ease-in-out 0.3s;
+}
+form ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+form li {
+  margin: 0 0 6px 0;
+  /* background-color: white; */
+}
+form input {
+  font-size: 16px;
+  border: none;
+}
+form input:active {
+  background-color: #17494d;
+}
+.feedback {
+  font-size: 8pt;
+  padding: 8px 0 0;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+}
+.pagination {
+  margin: 0 auto;
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  height: 100%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.pagination input {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+.pagination input:active {
+  background-color: #17494d;
+  color: white;
+  cursor: pointer;
+}
+.pagination input:hover:not(.active) {
+  /* background-color: #ddd; */
+  background-color: #17494d;
+  color: white;
+  cursor: pointer;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+thead {
+  border-collapse: collapse;
+  border-top: none;
+}
+
+th {
+  padding: 12px;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-left: none;
+  border-right: none;
+  padding: 12px;
+  /* display: block; */
+}
+
+td a {
+  /* position: absolute;
+  z-index: 1; */
+  /* top: auto; */
+  /* left: 0; */
+  background: url(no.gif);
+  color: #000;
+  text-decoration: none;
+  /* text-align: left; */
+}
+
+table tr:hover td {
+  /* background: #c7c7c7; */
+  background: #0c9c48;
+  color: white;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+}
+
+.table_view {
+  margin: 0 auto;
+  width: 1300px;
+  text-align: left;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+.data_btn:hover {
+  background-color: #0c9c48;
+  cursor: pointer;
+}
+.data_btn input:hover {
+  background-color: #0c9c48;
+  cursor: pointer;
+}
+
+/* Ticket View */
+.view {
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border: 5px solid;
+  border-radius: 30px;
+  height: 100%;
+}
+.subject {
+  margin: 25px;
+  font-size: 20px;
+  /* width: 100%;
+  height: 100%; */
+}
+.headline {
+  margin: 25px;
+  /* width: 100%;
+  height: 100%; */
+}
+.message {
+  font-size: 18px;
+  /* width: 100%; */
+  margin: 25px;
+  /* height: 100%; */
+}
+.feedback_message {
+  font-size: 18px;
+}
+.feedback_subject {
+  font-size: 24px;
+}
+.feedback_status {
+  font-size: 16px;
+}
+/* % for col in row:
+<td>
+  <!-- <a href="ticket.html"> {{ col }} </a> -->
+  <form action="single_ticket" method="post" class="data_btn">
+    <input type="submit" value="{{col}}" name="id" />
+  </form>
+</td>
+% end */
+
+/* ERROR STYLES */
+
+.error_body {
+  justify-content: left;
+  text-align: left;
+  display: flex;
+  margin: 25px;
+  padding-left: 45px;
+  width: 100%;
+  height: 100%;
+}
+/* .alert {
+  padding-left: 45px;
+} */
+.error_btn {
+  padding-left: 40px;
+}

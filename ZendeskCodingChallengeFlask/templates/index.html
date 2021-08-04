@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>All Tickets</title>
+  </head>
+  <body>
+    <div class="title">
+      Ticket Viewer
+
+      <!-- <div class="logo">
+        <img src="/views/zendesk_logo.png" alt="" />
+      </div> -->
+    </div>
+    <div class="caption">
+      If you wish to view a ticket, please select the ID of the ticket.
+    </div>
+
+    <div class="main_listview">
+      <div class="listview"></div>
+
+      <form action="get_tickets" method="get">
+        <!-- <ul>
+          <li><input type="submit" value="Submit" /></li>
+        </ul> -->
+      </form>
+      <div class="table_view">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Requester ID</th>
+              <th>Subject</th>
+              <th>Type</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Create Date</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {% if feedback%}
+            <div class="feedback">
+              {%for row in feedback%}
+
+              <tr>
+                {% for col in row%}
+                <td>
+                  <!-- <a href="ticket.html"> {{ col }} </a> -->
+                  <form action="single_ticket" method="post" class="data_btn">
+                    <input type="submit" value="{{col}}" name="id" />
+                  </form>
+                </td>
+                {% endfor%}
+              </tr>
+              {% endfor%}
+            </div>
+            {% endif%}
+          </tbody>
+        </table>
+      </div>
+      <!-- <div class="buttons">
+        <button type="button" class="view_tickets_btn">Previous Tickets</button>
+        <button type="button" class="view_tickets_btn">Next Tickets</button>
+      </div> -->
+      {% if number%}
+      <div class="pagination">
+        {% for i in range(1,number+1)%}
+        <!-- <li class = "page_item"><a class = "page_link" href="#">{{i}}</a></li> -->
+        <!-- <a href="/get_tickets"><input type = "button" formmethod="POST">{{i}}</a> -->
+        <!-- <a href="retrieve_page"><input type = "button" formmethod="POST">{{i}}</a> -->
+        <form action="retrieve_page" method="post">
+          <input type="submit" name="submit_button" value="{{ i }}" />
+        </form>
+        <!-- <a href="#">{{i}}</a> -->
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
