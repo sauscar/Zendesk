@@ -17,7 +17,7 @@ Flask will help in creating the local host, used for fast web service. Requests 
 
 # Set Up
 1. At the top of app.py you will see global_password, global_user, and global_subdomain, change these to the appropriate string values for your own Zendesk account.
-2. In the command line submit "$ python app.py" and it will initiate the local host. Then paste in http://localhost:8080/get_tickets to your browser after seeing "Listening on https://localhost:8080/". The page will load up in a few seconds.
+2. In the command line submit "$ python app.py" and it will initiate the local host. Then paste in http://localhost:8080/get_tickets to your browser after seeing "Running on https://localhost:8080/". The page will load up in a few seconds.
 
 # Views
 All ticket view:
